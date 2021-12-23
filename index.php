@@ -1,4 +1,8 @@
-<?php 
-require 'HTML/Hearde.html';
-?>
-<a href='Détail.php'>Détail</a>
+<?php
+
+require_once 'UserManager.php';
+
+$pdo = new PDO('mysql:host=localhost;dbname=dbkgb', 'root', '');
+$manager = new UserManager($pdo);
+$user = $manager->connect('john@doe.com', 'p4$$w0rd');
+echo $user->sayHello();
