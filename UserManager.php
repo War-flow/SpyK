@@ -12,8 +12,8 @@ class UserManager
     public function subscribe(
         string $email, 
         string $password, 
-        string $firstName, 
-        string $lastName, 
+        string $firstname, 
+        string $lastname, 
         string $birth,
         string $nation,
         string $special): bool
@@ -26,16 +26,16 @@ class UserManager
 
         // Préparation de la requête
         $statement = $this->pdo->prepare('
-INSERT INTO users (id, email, password, firstName, lastName, birth, nation, special) 
-VALUES (UUID(), :email, :password, :firstName, :lastName, :birth, :nation, :special)'
+INSERT INTO users (id, email, password, firstname, lastname, birth, nation, special) 
+VALUES (UUID(), :email, :password, :firstname, :lastname, :birth, :nation, :special)'
         );
 
         // Injection des valeurs des marqueurs
         $statement->bindValue(':email', $email, PDO::PARAM_STR);
         // Hashage du mot de passe
         $statement->bindValue(':password', password_hash($password, PASSWORD_BCRYPT), PDO::PARAM_STR);
-        $statement->bindValue(':firstName', $firstName, PDO::PARAM_STR);
-        $statement->bindValue(':lastName', $lastName, PDO::PARAM_STR);
+        $statement->bindValue(':firstName', $firstname, PDO::PARAM_STR);
+        $statement->bindValue(':lastName', $lastname, PDO::PARAM_STR);
         $statement->bindValue(':birth', $birth, PDO::PARAM_STR);
         $statement->bindValue(':nation', $nation, PDO::PARAM_STR);
         $statement->bindValue(':special', $special, PDO::PARAM_STR);
