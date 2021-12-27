@@ -1,4 +1,4 @@
 <?php 
-require 'HTML/Hearde.html';
+require 'Hearde.html';
 ?>
 <a href='Détail.php'>Détail</a>

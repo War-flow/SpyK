@@ -42,14 +42,12 @@ label {
   box-sizing: border-box;
 }
 
-#button {
-  width: 50%;
-  background-color: #4DCADB;
+.btn {
+  width: 40%;
   color:#F9F9F9;
   padding: 14px 20px;
   margin: 8px 0px;
-  border: none;
-  border-radius: 100px;
+  border-radius: 200px;
   cursor: pointer;
   align-items: center;
 }
@@ -64,6 +62,7 @@ label {
   color: #040404;
   border-radius: 25px;
 }
+.error {color: #FF0000;}
  
 
 @media only screen and (min-width: 792px) {
@@ -103,6 +102,18 @@ label {
   box-sizing: border-box;
 }
 
+.btn {
+  width: 50%;
+  color:#F9F9F9;
+  padding: 14px 20px;
+  margin: 8px 0px;
+  border-radius: 200px;
+  cursor: pointer;
+  align-items: center;
+}
 
+.error {
+  color: #FF0000;
+}
 
 }

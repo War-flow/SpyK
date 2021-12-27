@@ -1,8 +1,45 @@
 <?php
+session_start();
+?>
 
-require_once 'UserManager.php';
+<!DOCTYPE html>
+<html lang="fr">
 
-$pdo = new PDO('mysql:host=localhost;dbname=dbkgb', 'root', '');
-$manager = new UserManager($pdo);
-$user = $manager->connect('john@doe.com', 'p4$$w0rd');
-echo $user->sayHello();
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/Formulaire.css">
+  <link rel="stylesheet" href="Bootstrap/bootstrap.min.css">
+  <title>Connexion Médiatheque</title>
+</head>
+
+<body>
+  <div class="box2">
+    <div class="box">
+      <form method="post" action="Database/Login.php">
+  
+        <div class="center">
+          <h1>Se Connecter</h1>
+        </div>
+  
+        <label for="mail">Votre adresse Email</label>
+        <input type="email" name="email" id="mail" placeholder="Votre Email..">
+  
+        <label for="password">Votre Mot de passe</label>
+        <input type="password" name="password" id="password" placeholder="Votre mot de passe..">
+  
+        <div class="center">
+        <button type="button submit" class="btn btn-info" value="Connexion" id="button " name="submit">Connexion</button>
+        </div>
+
+  
+        <div class="center">
+          <a class="survol" href="NewRegistra.php">Inscriptions ici</a>
+        </div>
+      </form>
+    </div>
+  </div>
+<script src="Bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>
