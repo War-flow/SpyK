@@ -25,19 +25,19 @@ session_start();
         <div>
 
           <label for="mail">Votre adresse Email</label>
-          <input type="email" name="email" id="mail" placeholder="Votre Email..">
+          <input type="email" name="email" id="mail" placeholder="Votre Email.." maxlength="255" required autofocus>
 
           <label for="password">Votre Mot de passe</label>
-          <input type="password" name="password" id="password" placeholder="Votre mot de passe..">
+          <input type="password" name="password" id="password" placeholder="Votre mot de passe.." maxlength="255" min="10" required>
 
           <label for="firstname">Votre Prénom</label>
-          <input type="text" name="firstname" id="firstname" placeholder="Votre Prénom">
+          <input type="text" name="firstname" id="firstname" placeholder="Votre Prénom.." maxlength="255" required>
 
           <label for="lastname">Votre Nom</label>
-          <input type="text" name="lastname" id="lastname" placeholder="Votre Nom">
+          <input type="text" name="lastname" id="lastname" placeholder="Votre Nom.."maxlength="255" required>
 
           <label for="birth">Votre Date de naissance</label>
-          <input type="date" name="birth" id="birth" placeholder="Votre Date de naissance">
+          <input type="date" name="birth" id="birth" placeholder="Votre Date de naissance.." max="1995-12-31" required>
 
           <label for="nation">Votre Nationalité</label>
           <select id="nation" name="nation">
@@ -48,7 +48,7 @@ session_start();
 
           <div class="center">
           <label for="special" class="sp">Vos Spécialités :</label>
-          <textarea name="special" rows="2" cols="50">Decrisption des Spécialités</textarea>
+          <textarea name="special" rows="2" cols="50" placeholder="Decrisption des Spécialité.." maxlength="255" required></textarea>
          </div>
          
         </div>

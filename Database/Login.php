@@ -6,22 +6,30 @@ require 'Dsn.php';
 
 if (isset($_POST['submit'])) {
 
-$email = $_POST['email'];
-$password = $_POST['password'];
+$email = test_input($_POST["email"]);
+$password = test_input($_POST["password"]);
 
-$dsn = new PDO('mysql:host=localhost;dbname=dbkgb', 'root', '');
+$pdo = new PDO('mysql:host=localhost;dbname=dbkgb', 'root', '');
+
 
 $sql = "SELECT * FROM users WHERE email = '$email' ";
-$result = $dsn->prepare($sql);
+$result = $pdo->prepare($sql);
 $result->execute();
-$data = $result->fetchAll();
+$base = $result->fetchAll();
 
-if (password_verify($password, $data[0]["password"])) 
+if (password_verify($password, $base[0]["password"])) 
     {
-        header( "refresh:1;url=../Page/Home.php" );
-        $_SESSION['email'] = $email;
+        header( "Location:../Page/Home.php" );
+        $_SESSION['email'] = $email; 
 
-    } else
+} else
 
     echo 'Erreur de co';
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
 }

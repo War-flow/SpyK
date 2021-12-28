@@ -24,10 +24,10 @@ session_start();
         </div>
   
         <label for="mail">Votre adresse Email</label>
-        <input type="email" name="email" id="mail" placeholder="Votre Email..">
+          <input type="email" name="email" id="mail" placeholder="Votre Email.." maxlength="255" required autofocus>
   
         <label for="password">Votre Mot de passe</label>
-        <input type="password" name="password" id="password" placeholder="Votre mot de passe..">
+        <input type="password" name="password" id="password" placeholder="Votre mot de passe.." maxlength="255" min="10" required>
   
         <div class="center">
         <button type="button submit" class="btn btn-info" value="Connexion" id="button " name="submit">Connexion</button>

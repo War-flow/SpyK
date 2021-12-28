@@ -14,7 +14,7 @@ try {
               `special` VARCHAR(255) NOT NULL , 
               PRIMARY KEY (`id`), 
               UNIQUE (`email`))') !== false) { {
-        echo 'Installation terminée !';
+                
       }
     } else {
       echo 'Impossible de créer la table users <br>';
