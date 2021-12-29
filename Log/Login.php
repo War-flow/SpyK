@@ -36,11 +36,6 @@ if (isset($_SESSION['email'])) {
         <div class="center">
         <button type="button submit" class="btn btn-info" value="Connexion" id="button " name="submit">Connexion</button>
         </div>
-
-  
-        <div class="center">
-          <a class="survol" href="Registra.php">Inscriptions ici</a>
-        </div>
       </form>
     </div>
   </div>
