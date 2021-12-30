@@ -2,7 +2,6 @@
 
 class Agents
 {
-  public string $email;
   public int $codeId;
   public string $firtname;
   public string $lastname;

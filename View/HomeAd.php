@@ -2,10 +2,12 @@
 
 session_start();
 
-require 'Hearde.html';
+require 'Hearde.php';
 
 if (isset($_SESSION['email'])) {
 
-  header( "Location:HomeAd.php" );
+}
+else {
+  header( "Location:Home.php" );
 }
 

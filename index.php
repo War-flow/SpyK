@@ -4,9 +4,9 @@ session_start();
 
 if (isset($_SESSION['email'])) {
 
-  header( "Location:View/Home.php" );
+  header( "Location:View/HomeAd.php" );
 }
 
 else {
-  header( "Location:Log\Login.php");
+  header( "Location:View/Home.php" );
 }

@@ -10,12 +10,12 @@ if (isset($_POST['submit'])) {
 
 
 
-  $sql = "SELECT * FROM agents WHERE email = '$email' ";
+  $sql = "SELECT * FROM admins WHERE email = '$email' ";
   $result = $pdo->prepare($sql);
   $result->execute();
   $data = $result->fetchAll();
 
-  if ($password === $data[0]["codeId"]) {
+  if ($password === $data[0]["password"]) {
     header("Location:../View/Home.php");
     $_SESSION['email'] = $email;
   } else
