@@ -6,7 +6,7 @@ require 'Hearde.html';
 
 if (isset($_SESSION['email'])) {
 
-  echo 'Accueil';
+  echo "Accueil";
 }
 
 else {

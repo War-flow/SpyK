@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 require 'Dsn.php';
 
 
@@ -11,15 +10,15 @@ if (isset($_POST['submit'])) {
 
 
 
-  $sql = "SELECT * FROM users WHERE email = '$email' ";
+  $sql = "SELECT * FROM agents WHERE email = '$email' ";
   $result = $pdo->prepare($sql);
   $result->execute();
-  $base = $result->fetchAll();
+  $data = $result->fetchAll();
 
-  if (password_verify($password, $base[0]["password"])) {
+  if ($password === $data[0]["codeId"]) {
     header("Location:../View/Home.php");
     $_SESSION['email'] = $email;
   } else
-
+  
     header("Location:../View/Error.html");
 }
