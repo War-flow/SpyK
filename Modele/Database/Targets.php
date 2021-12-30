@@ -1,6 +1,6 @@
 <?php 
 
-class Contacts
+class Target
 {
   public string $firstname;
   public string $lastname;

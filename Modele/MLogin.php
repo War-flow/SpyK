@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'Dsn.php';
+require_once 'Dsn.php';
 
 
 if (isset($_POST['submit'])) {
@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
   $data = $result->fetchAll();
 
   if ($password === $data[0]["password"]) {
-    header("Location:../View/Home.php");
+    header("Location:../View/HomeAd.php");
     $_SESSION['email'] = $email;
   } else
   

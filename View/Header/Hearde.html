@@ -8,24 +8,23 @@
 </head>
 <body>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="HomeAd.php">DATA-KGB</a>
+      <a class="navbar-brand" href="Home.php">DATA-KGB</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="Database.php">Database</a>
-          </li>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
-            <button class="btn btn-outline-warning" type="submit">Recherche</button>
-          </form>
+        <ul class="navbar-nav me-auto mb-1 mb-lg-0">
+       
         </ul>
-        <form method="post" action="../Log/Logout.php">
-          <button class="btn btn-outline-warning" type="submit">Déconnexion</button>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
+          <button class="btn btn-warning" type="submit">Recherche</button>
+        </form>
+        <ul></ul>
+        <form method="post" action="../Log/Login.php">
+          <button class="btn btn-warning" type="submit">Connexion</button>
         </form>
       </div>
     </div>
