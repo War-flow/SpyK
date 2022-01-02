@@ -10,3 +10,4 @@ if (isset($_SESSION['email'])) {
 else {
   header( "Location:View/Home.php" );
 }
+

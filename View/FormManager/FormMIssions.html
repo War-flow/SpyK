@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Base de donneé Missions</title>
+    <link rel="stylesheet" href="../../CSS/Formulaire.css">
+    <link rel="stylesheet" href="../../Bootstrap/bootstrap.min.css"> 
+</head>
+
+<body>
+    <div class="box2">
+        <div class="box">
+            <form method="post">
+                    <div class="center">
+                        <h1>Création Missions</h1>
+                    </div>
+                       <label for="title">Titre</label>
+                        <input type="text" name="title" class="text">
+
+                        <label for="description">Description</label>
+                        <textarea name="description" class="text" required></textarea>
+
+                        <label for="codename">Nom de code</label>
+                        <input type="text" name="codename" class="text" required>
+
+                        <label for="country">Pays</label>
+                        <input type="text" name="country" class="text" required>
+
+                        <label for="agent"> Code Agents</label>
+                        <input type="text" name="agent" class="text" required>
+
+                        <label for="targets">Cible</label>
+                        <input type="text" name="targets" class="text" required>
+
+                        <label for="contacts">Contacts</label>
+                        <input type="text" name="contacts" class="text" required>
+
+                        <label for="type">Type</label>
+                        <input type="text" name="type" class="text" required>
+
+                        <label for="status">Status</label>
+                        <select class="text" name="status">
+                          <option value="En Préparation">En Préparation</option>
+                          <option value="En Cours">En Cours</option>
+                          <option value="Terminé">Terminé</option>
+                        </select><br>
+
+                        <label for="hide">Code Planque</label>
+                        <input type="text" name="hide" class="text">
+
+                        <label for="startDate">Date de début</label>
+                        <input type="date" name="startDate" class="text" required>
+
+                        <label for="endDate">Date de fin</label>
+                        <input type="date" name="endDate" class="text"required>
+                        <div class="center">
+                            <button type="submit" class="btn btn-info">Créer une Missions</button>
+                        </div>
+            </form>
+        </div>
+    </div>
+    <script src="../../Bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

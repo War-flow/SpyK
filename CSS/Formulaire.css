@@ -31,8 +31,7 @@ html {
 label {
   padding-left: 45px ;
 }
-
-#mail, #password, #name, #id, #lastname, #firstname, #birth {
+#mail, #password {
   width: 80%;
   padding: 5px 10px;
   margin: 12px 35px;
@@ -41,6 +40,17 @@ label {
   border-radius: 4px;
   box-sizing: border-box;
 }
+
+.text {
+  width: 80%;
+  padding: 1px 1px;
+  margin: 12px 35px;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
 
 .btn {
   width: 40%;
@@ -91,7 +101,7 @@ label {
   width: 500px;
 }
 
-#mail, #password, #name, #id, #lastname, #firstname, #birth {
+#mail, #password {
   width: 85%;
   padding: 5px 10px;
   margin: 12px 45px;

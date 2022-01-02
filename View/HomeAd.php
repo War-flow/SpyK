@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once 'Header/HeardeAd.html';
+require_once 'Header/HeaderAd.html';
 
 
 if (isset($_SESSION['email'])) {
@@ -10,8 +10,12 @@ echo 'Accueil Admin';
 
 }
 else {
-  header( "Location:Home.php" );
+  header("Location:Home.php" );
+  
 }
 ?>
-<a href="Detail.php">Détail</a>
+<head>
+  <title>Missions Spy K Admin</title>
+</head>
+
 
