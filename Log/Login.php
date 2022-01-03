@@ -21,7 +21,7 @@ if (isset($_SESSION['email'])) {
 <body>
   <div class="box2">
     <div class="box">
-      <form method="post" action="../Modele/MLogin.php">
+      <form method="post" action="MLogin.php">
   
         <div class="center">
           <h1>Se Connecter</h1>

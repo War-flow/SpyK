@@ -2,6 +2,6 @@
 
 session_start();
 
-require_once '..\..\Modele\Database\Contacts.php';
+require_once '..\..\Modele\Contacts.php';
 
 echo 'Contact';

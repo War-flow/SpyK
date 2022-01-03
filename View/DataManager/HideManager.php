@@ -2,6 +2,6 @@
 
 session_start();
 
-require_once '..\..\Modele\Database\Hide.php';
+require_once '..\..\Modele\Hide.php';
 
 echo 'Planque';

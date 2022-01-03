@@ -2,6 +2,6 @@
 
 session_start();
 
-require_once '..\..\Modele\Database\Agents.php';
+require_once '..\..\Modele\Agents.php';
 
 echo 'Agent';

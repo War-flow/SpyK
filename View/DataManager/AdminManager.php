@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-require_once '..\..\Modele\Database\Admin.php';
+require_once '..\..\Modele\Admin.php';
 
 echo 'Admin';
 

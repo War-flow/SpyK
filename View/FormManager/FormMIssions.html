@@ -9,43 +9,44 @@
 <body>
     <div class="box2">
         <div class="box">
-            <form method="post">
+            <form class="form" method="post" action="../DataManager/MissionManager.php">
                     <div class="center">
                         <h1>Création Missions</h1>
                     </div>
                        <label for="title">Titre</label>
-                        <input type="text" name="title" class="text">
+                        <input type="text" name="title" class="text" maxlength="255">
 
                         <label for="description">Description</label>
-                        <textarea name="description" class="text" required></textarea>
+                        <textarea name="description" class="text" required maxlength="1000"></textarea>
 
                         <label for="codename">Nom de code</label>
-                        <input type="text" name="codename" class="text" required>
+                        <input type="text" name="codename" class="text" required maxlength="255">
 
                         <label for="country">Pays</label>
-                        <input type="text" name="country" class="text" required>
+                        <input type="text" name="country" class="text" required maxlength="255">
 
                         <label for="agent"> Code Agents</label>
-                        <input type="text" name="agent" class="text" required>
+                        <input type="text" name="agent" class="text" required maxlength="255">
 
                         <label for="targets">Cible</label>
-                        <input type="text" name="targets" class="text" required>
+                        <input type="text" name="targets" class="text" required maxlength="255">
 
                         <label for="contacts">Contacts</label>
-                        <input type="text" name="contacts" class="text" required>
+                        <input type="text" name="contacts" class="text" required maxlength="255">
 
                         <label for="type">Type</label>
-                        <input type="text" name="type" class="text" required>
+                        <input type="text" name="type" class="text" required maxlength="255">
 
                         <label for="status">Status</label>
                         <select class="text" name="status">
                           <option value="En Préparation">En Préparation</option>
                           <option value="En Cours">En Cours</option>
                           <option value="Terminé">Terminé</option>
+                          <option value="Echec">Eche</option>
                         </select><br>
 
                         <label for="hide">Code Planque</label>
-                        <input type="text" name="hide" class="text">
+                        <input type="number" name="hide" class="text">
 
                         <label for="startDate">Date de début</label>
                         <input type="date" name="startDate" class="text" required>
@@ -53,7 +54,7 @@
                         <label for="endDate">Date de fin</label>
                         <input type="date" name="endDate" class="text"required>
                         <div class="center">
-                            <button type="submit" class="btn btn-info">Créer une Missions</button>
+                            <button type="submit" class="btn btn-info" name="submit">Créer une Missions</button>
                         </div>
             </form>
         </div>

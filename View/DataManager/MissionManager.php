@@ -1,47 +1,46 @@
 <?php 
 
-session_start();
-
-class MissionManager
+if (isset($_POST['submit']))
 {
-    private PDO $pdo;
+   $title = $_POST['title'];
+   $description = $_POST['description'] ;
+   $codename = $_POST['codename'];
+   $country = $_POST['country'];
+   $agent = $_POST['agent'];
+   $targets = $_POST['targets'];
+   $contacts = $_POST['contacts'];
+   $type = $_POST['type'];
+   $status = $_POST['status'];
+   $hide = $_POST['hide'];
+   $startDate = $_POST['startDate'];
+   $endDate = $_POST['endDate'];
 
-    public function __construct(PDO $pdo)
-    {
-        $this->pdo = $pdo;
-    }
+   $dsn = new PDO('mysql:host=localhost;dbname=dbkgb', 'root', '');
 
-    public function addMission(
-    string $title, 
-    string $description, 
-    string $codename, 
-    string $country, 
-    string $agent, 
-    string $targets,
-    string $contacts,
-    string $type,
-    string $status,
-    string $hide,
-    string $startDate,
-    string $endDate): bool
-    {
-        $statement = $this->pdo->prepare('INSERT INTO missions
-        (`title`, `description`, `codename`, `country`, `agent`, `targets`, `contacts`, `type`, `status`, `hide`, `startDate`, `endDate`) 
-        VALUES (`:title`, `:description`, `:codename`, `:country`, `:agent`, `:targets`, `:contacts`, `:type`, `:status`, `:hide`,`:startDate`, `:endDate`)');
-        $statement->bindValue(':title', $title, PDO::PARAM_STR);
-        $statement->bindValue(':description', $description, PDO::PARAM_STR);
-        $statement->bindValue(':codename', $codename, PDO::PARAM_STR);
-        $statement->bindValue(':country', $country, PDO::PARAM_STR);
-        $statement->bindValue(':agent', $agent, PDO::PARAM_STR);
-        $statement->bindValue(':targets', $targets, PDO::PARAM_STR);
-        $statement->bindValue(':contacts', $contacts, PDO::PARAM_STR);
-        $statement->bindValue(':type', $type, PDO::PARAM_STR);
-        $statement->bindValue(':status', $status, PDO::PARAM_STR);
-        $statement->bindValue(':hide', $hide, PDO::PARAM_STR);
-        $statement->bindValue(':startDate', $startDate, PDO::PARAM_STR);
-        $statement->bindValue(':endDate', $endDate, PDO::PARAM_STR);
+   $sql = "INSERT INTO `missions`(`title`, `description`, `codename`, `country`, `agent`, `targets`, `contacts`, `type`, `status`, `hide`, `startDate`, `endDate`)
+   VALUES ('$title','$description ','$codename','$country','$agent ','$targets','$contacts','$type','$status ','$hide','$startDate','$endDate ')";
+$req = $dsn->prepare($sql);
+$req->execute();
 
-        return $statement->execute();
-    }
+header( "Location:../HomeAd.php");
+}
 
+class MissionManager {
+   
+   private PDO $pdo ;
+
+   public function __construct(PDO $pdo)
+   {
+      $this->pdo = $pdo;
+   }
+
+   public function getMission(int $page): array {
+      require_once '../Modele/Missions.php';
+      $stm = $this->pdo->prepare('SELECT * FROM missions LIMIT :start, 3');
+      $stm->setFetchMode(PDO::FETCH_CLASS, 'Missions');
+      $stm->bindValue(':start', 3 * ($page -1), PDO::PARAM_INT);
+      $stm->execute();
+
+      return $stm->fetchAll();
+   }
 }

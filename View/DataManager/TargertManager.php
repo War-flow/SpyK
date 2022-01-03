@@ -2,6 +2,6 @@
 
 session_start();
 
-require_once '..\..\Modele\Database\Targets.php';
+require_once '..\..\Modele\Targets.php';
 
 echo 'Cible';
