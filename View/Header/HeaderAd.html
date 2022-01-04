@@ -16,20 +16,31 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <div class="dropdown">
-              <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Sélectionné un Formulaire
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="./DataManager/AdminManager.php">Admin</a></li>
-                <li><a class="dropdown-item" href="./DataManager/AgentManager.php">Agent</a></li>
-                <li><a class="dropdown-item" href="./DataManager/ContactsManager.php">Contacts</a></li>
-                <li><a class="dropdown-item" href="./DataManager/HideManager.php">Planques</a></li>
-                <li><a class="dropdown-item" href="./Index/MissionIndex.php">Mission</a></li>
-                <li><a class="dropdown-item" href="./DataManager/TargertManager.php">Cible</a></li>
-              </ul>
-            </div>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Sélectionné une base
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="./FormManager/FormAdmin.php">Admin</a></li>
+              <li><a class="dropdown-item" href="./FormManager/FormMissions.php">Agent</a></li>
+              <li><a class="dropdown-item" href="./FormManager/FormMissions.php">Contacts</a></li>
+              <li><a class="dropdown-item" href="./FormManager/FormMissions.php">Planques</a></li>
+              <li><a class="dropdown-item" href="./FormManager/FormMissions.php">Mission</a></li>
+              <li><a class="dropdown-item" href="./FormManager/FormMissions.php">Cible</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Sélectionné un Formulaire
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="./FormManager/FormAdmin.php">Admin</a></li>
+              <li><a class="dropdown-item" href="./FormManager/FormAgent.php">Agent</a></li>
+              <li><a class="dropdown-item" href="./FormManager/FormContacts.php">Contacts</a></li>
+              <li><a class="dropdown-item" href="./FormManager/FormHide.php">Planques</a></li>
+              <li><a class="dropdown-item" href="./FormManager/FormMissions.php">Mission</a></li>
+              <li><a class="dropdown-item" href="./FormManager/FormTarget.php">Cible</a></li>
+            </ul>
           </li>
         </ul>
         <form method="post" action="../Log/Logout.php">

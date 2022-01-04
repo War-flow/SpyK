@@ -9,13 +9,41 @@ class Agents
   public string $nation;
   public string $special;
 
-  public function __construct(int $codeId, string $firstname, string $lastname, string $birth, string $nation, string $special)
+  public function getCodeId(): string
+
   {
-    $this->codeId = $codeId;
-    $this->firstname = $firstname;
-    $this->lastname = $lastname;
-    $this->birth = $birth;
-    $this->nation = $nation;
-    $this->special = $special;
+      return $this->codeId;
+  }
+
+  
+  public function getFirstname(): string
+
+  {
+      return $this->firstname;
+  }
+
+
+  public function getLastname(): string
+
+  {
+      return $this->lastname;
+  }
+
+  public function getBirth(): string
+
+  {
+      return $this->birth;
+  }
+
+  public function getNation(): string
+
+  {
+      return $this->nation;
+  }
+
+  public function getSpecial(): string
+
+  {
+      return $this->special;
   }
 }

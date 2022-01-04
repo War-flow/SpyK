@@ -1,6 +1,10 @@
+<?php require_once '../Header/Ad.html'; ?>
 <!DOCTYPE html>
-
+<html lang="fr">
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Base de donneé Missions</title>
     <link rel="stylesheet" href="../../CSS/Formulaire.css">
     <link rel="stylesheet" href="../../Bootstrap/bootstrap.min.css"> 
@@ -14,7 +18,7 @@
                         <h1>Création Missions</h1>
                     </div>
                        <label for="title">Titre</label>
-                        <input type="text" name="title" class="text" maxlength="255">
+                        <input type="text" name="title" class="text"  required maxlength="255">
 
                         <label for="description">Description</label>
                         <textarea name="description" class="text" required maxlength="1000"></textarea>
@@ -23,10 +27,10 @@
                         <input type="text" name="codename" class="text" required maxlength="255">
 
                         <label for="country">Pays</label>
-                        <input type="text" name="country" class="text" required maxlength="255">
+                        <input type="text" name="country" class="text" required maxlength="25">
 
                         <label for="agent"> Code Agents</label>
-                        <input type="text" name="agent" class="text" required maxlength="255">
+                        <input type="number" name="agent" class="text" required maxlength="12" minlength="12">
 
                         <label for="targets">Cible</label>
                         <input type="text" name="targets" class="text" required maxlength="255">
@@ -42,11 +46,11 @@
                           <option value="En Préparation">En Préparation</option>
                           <option value="En Cours">En Cours</option>
                           <option value="Terminé">Terminé</option>
-                          <option value="Echec">Eche</option>
+                          <option value="Echec">Echec</option>
                         </select><br>
 
                         <label for="hide">Code Planque</label>
-                        <input type="number" name="hide" class="text">
+                        <input type="number" name="hide" class="text" required maxlength="12" minlength="12">
 
                         <label for="startDate">Date de début</label>
                         <input type="date" name="startDate" class="text" required>

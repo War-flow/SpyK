@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
   $result->execute();
   $data = $result->fetchAll();
 
-  if ($password === $data[0]["password"]) {
+  if (password_verify($password, $data[0]["password"])) {
     header("Location:../View/HomeAd.php");
     $_SESSION['email'] = $email;
   } else

@@ -8,12 +8,33 @@ class Admin
   public string $password;
   public string $creationDate;
 
-  public function __construct(string $firstname, string $lastname, string $email, string $password, string $creationDate)
+  public function getFirstname(): string
+
   {
-    $this->firstname = $firstname;
-    $this->lastname = $lastname;
-    $this->email = $email;
-    $this->password = $password;
-    $this->creationDate = $creationDate;
+      return $this->firstname;
   }
+
+
+  public function getLastname(): string
+
+  {
+      return $this->lastname;
+  }
+
+  public function getEmail(): string
+
+  {
+      return $this->email;
+  }
+  public function getPassword(): string
+
+  {
+      return $this->password;
+  }
+  public function getCreationDate(): string
+
+  {
+      return $this->creationDate;
+  }
+
 }

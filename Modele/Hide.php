@@ -7,12 +7,29 @@ class Hide
   public string $country;
   public string $type;
 
+  public function getCode(): string
 
-  public function __construct(int $code, string $address, string $country, string $type)
   {
-    $this->code = $code;
-    $this->address = $address;
-    $this->country = $country;
-    $this->type = $type;
+      return $this->code;
+  }
+
+  
+  public function getAddress(): string
+
+  {
+      return $this->address;
+  }
+
+
+  public function getCountry(): string
+
+  {
+      return $this->country;
+  }
+
+  public function getType(): string
+
+  {
+      return $this->type;
   }
 }

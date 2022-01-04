@@ -4,16 +4,36 @@ class Target
 {
   public string $firstname;
   public string $lastname;
-  public string $bith;
+  public string $birth;
   public string $codeName;
   public string $nation;
 
-  public function __construct(string $firstname, string $lastname, string $birth, string $codeName, string $nation)
+  public function getFirstname(): string
+
   {
-    $this->firstname = $firstname;
-    $this->lastname = $lastname;
-    $this->birth = $birth;
-    $this->codeName = $codeName;
-    $this->nation = $nation;
+      return $this->firstname;
+  }
+
+
+  public function getLastname(): string
+
+  {
+      return $this->lastname;
+  }
+
+  public function getBirth(): string
+
+  {
+      return $this->birth;
+  }
+  public function getCodename(): string
+
+  {
+      return $this->codename;
+  }
+  public function getNation(): string
+
+  {
+      return $this->nation;
   }
 }
