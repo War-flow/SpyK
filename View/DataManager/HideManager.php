@@ -1,22 +1,17 @@
 <?php 
 
-if (isset($_POST['submit'])) {
-  
-  $code = $_POST['code'];
-  $address = $_POST['address'];
-  $country = $_POST['country'];
-  $type = $_POST['type'];
+require_once '../../Log/Dsn.php';
 
-  try {
-    $dsn = new PDO('mysql:host=localhost;dbname=dbkgb', 'root', '');
-  } catch (PDOException $exception) {
-    file_put_contents('dblogs.log', $exception->getMessage() . PHP_EOL, FILE_APPEND);
-    die($exception->getMessage());
-  }
+if (isset($_POST['submit'])) {
+  $code = htmlspecialchars($_POST['code']);
+  $address = htmlspecialchars($_POST['address']);
+  $country = htmlspecialchars($_POST['country']);
+  $type = htmlspecialchars($_POST['type']);
+
 
   $sql = "INSERT INTO `hide`(`code`, `address`, `country`, `type`) 
   VALUES ('$code ','$address','$country ','$type')";
-  $req = $dsn->prepare($sql);
+  $req = $pdo->prepare($sql);
   $req->execute();
 
   header("Location:../HomeAd.php");

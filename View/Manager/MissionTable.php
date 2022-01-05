@@ -2,8 +2,7 @@
 
 session_start();
 
-$pdo = new PDO('mysql:host=localhost;dbname=dbkgb', 'root', '');
-
+require_once '../../Log/Dsn.php';
 ?>
 
 <!DOCTYPE html>

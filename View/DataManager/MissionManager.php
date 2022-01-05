@@ -1,25 +1,25 @@
 <?php 
 
+require_once '../../Log/Dsn.php';
+
 if (isset($_POST['submit']))
 {
-   $title = $_POST['title'];
-   $description = $_POST['description'] ;
-   $codename = $_POST['codename'];
-   $country = $_POST['country'];
-   $agent = $_POST['agent'];
-   $targets = $_POST['targets'];
-   $contacts = $_POST['contacts'];
-   $type = $_POST['type'];
-   $status = $_POST['status'];
-   $hide = $_POST['hide'];
-   $startDate = $_POST['startDate'];
-   $endDate = $_POST['endDate'];
-
-   $dsn = new PDO('mysql:host=localhost;dbname=dbkgb', 'root', '');
+   $title =  htmlspecialchars($_POST['title']);
+   $description = htmlspecialchars($_POST['description']);
+   $codename = htmlspecialchars($_POST['codename']);
+   $country = htmlspecialchars($_POST['country']);
+   $agent = htmlspecialchars($_POST['agent']);
+   $targets = htmlspecialchars($_POST['targets']);
+   $contacts = htmlspecialchars($_POST['contacts']);
+   $type = htmlspecialchars($_POST['type']);
+   $status = htmlspecialchars($_POST['status']);
+   $hide = htmlspecialchars($_POST['hide']);
+   $startDate = htmlspecialchars($_POST['startDate']);
+   $endDate = htmlspecialchars($_POST['endDate']);
 
    $sql = "INSERT INTO `missions`(`title`, `description`, `codename`, `country`, `agent`, `targets`, `contacts`, `type`, `status`, `hide`, `startDate`, `endDate`)
    VALUES ('$title','$description ','$codename','$country','$agent ','$targets','$contacts','$type','$status ','$hide','$startDate','$endDate ')";
-$req = $dsn->prepare($sql);
+$req = $pdo->prepare($sql);
 $req->execute();
 
 header( "Location:../HomeAd.php");

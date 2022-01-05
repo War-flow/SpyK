@@ -1,20 +1,19 @@
 <?php
 session_start();
 
-$pdo = new PDO('mysql:host=localhost;dbname=dbkgb', 'root', '');
+require_once '../../Log/Dsn.php';
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {
 
 
   if (isset($_POST['submit'])) {
-    $codeId = $_POST['codeId'];
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
-    $birth = $_POST['birth'];
-    $nation = $_POST['nation'];
-    $special = $_POST['special'];
-
-
+    $codeId = htmlspecialchars($_POST['codeId']);
+    $firstname = htmlspecialchars($_POST['firstname']);
+    $lastname = htmlspecialchars($_POST['lastname']);
+    $birth = htmlspecialchars($_POST['birth']);
+    $nation = htmlspecialchars($_POST['nation']);
+    $special = htmlspecialchars($_POST['special']);
+    
     $getId = $_GET['id'];
 
     $recupData = $pdo->prepare("SELECT * FROM `agents` WHERE `id` = ? ");

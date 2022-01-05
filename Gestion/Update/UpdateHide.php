@@ -1,18 +1,17 @@
 <?php
 session_start();
 
-$pdo = new PDO('mysql:host=localhost;dbname=dbkgb', 'root', '');
+require_once '../../Log/Dsn.php';
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {
 
 
   if (isset($_POST['submit']))
 {
-  $code = $_POST['code'];
-  $address = $_POST['address'];
-  $country = $_POST['country'];
-  $type = $_POST['type'];
-
+  $code = htmlspecialchars($_POST['code']);
+  $address = htmlspecialchars($_POST['address']);
+  $country = htmlspecialchars($_POST['country']);
+  $type = htmlspecialchars($_POST['type']);
 
   $getId = $_GET['id'];
 
@@ -33,10 +32,8 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
   } else {
     echo "Identifiant non trouvée dans la base de donnée";
-
-  }
 }
-
+}
 }
 ?>
 <!DOCTYPE html>
@@ -45,7 +42,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base de donneé Missions</title>
+    <title>Modifier Planque</title>
     <link rel="stylesheet" href="../../CSS/Formulaire.css">
     <link rel="stylesheet" href="../../Bootstrap/bootstrap.min.css"> 
 </head>

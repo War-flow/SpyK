@@ -1,18 +1,17 @@
 <?php
 session_start();
 
-$pdo = new PDO('mysql:host=localhost;dbname=dbkgb', 'root', '');
+require_once '../../Log/Dsn.php';
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {
 
 
   if (isset($_POST['submit']))
 {
-  $firstname = $_POST['firstname'];
-  $lastname = $_POST['lastname'];
-  $email = $_POST['email'];
-  $password = $_POST['password'];
-
+  $firstname = htmlspecialchars( $_POST['firstname']);
+  $lastname =  htmlspecialchars($_POST['lastname']);
+  $email = htmlspecialchars( $_POST['email']);
+  $password = htmlspecialchars( $_POST['password']);
 
   $getId = $_GET['id'];
 

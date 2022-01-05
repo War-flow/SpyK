@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-$pdo = new PDO('mysql:host=localhost;dbname=dbkgb', 'root', '');
+require_once '../../Log/Dsn.php';
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {
 

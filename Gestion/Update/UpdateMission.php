@@ -1,26 +1,26 @@
 <?php
 session_start();
 
-$pdo = new PDO('mysql:host=localhost;dbname=dbkgb', 'root', '');
+require_once '../../Log/Dsn.php';
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {
 
 
   if (isset($_POST['submit']))
 {
-   $title = $_POST['title'];
-   $description = $_POST['description'] ;
-   $codename = $_POST['codename'];
-   $country = $_POST['country'];
-   $agent = $_POST['agent'];
-   $targets = $_POST['targets'];
-   $contacts = $_POST['contacts'];
-   $type = $_POST['type'];
-   $status = $_POST['status'];
-   $hide = $_POST['hide'];
-   $startDate = $_POST['startDate'];
-   $endDate = $_POST['endDate'];
-
+  
+   $title =  htmlspecialchars($_POST['title']);
+   $description = htmlspecialchars($_POST['description']);
+   $codename = htmlspecialchars($_POST['codename']);
+   $country = htmlspecialchars($_POST['country']);
+   $agent = htmlspecialchars($_POST['agent']);
+   $targets = htmlspecialchars($_POST['targets']);
+   $contacts = htmlspecialchars($_POST['contacts']);
+   $type = htmlspecialchars($_POST['type']);
+   $status = htmlspecialchars($_POST['status']);
+   $hide = htmlspecialchars($_POST['hide']);
+   $startDate = htmlspecialchars($_POST['startDate']);
+   $endDate = htmlspecialchars($_POST['endDate']);
 
   $getId = $_GET['id'];
 
