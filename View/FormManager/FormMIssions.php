@@ -50,7 +50,7 @@
                         </select><br>
 
                         <label for="hide">Code Planque</label>
-                        <input type="number" name="hide" class="text" required maxlength="12" minlength="12">
+                        <input type="number" name="hide" class="text" maxlength="12" minlength="12">
 
                         <label for="startDate">Date de début</label>
                         <input type="date" name="startDate" class="text" required>
