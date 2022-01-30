@@ -2,7 +2,7 @@
   $hostname = 'uyu7j8yohcwo35j3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
   $database = 'mahjmmdwa6sj72o9';
   $username = 'yy4kgsc6x14bh9ue';
-  $password = 'hgvlup9dnifdcj2j';
+  $password = 'a72u1xtlwrjxp3aw';
   try {
     $pdo = new PDO("mysql:host=$hostname;dbname=$database", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
