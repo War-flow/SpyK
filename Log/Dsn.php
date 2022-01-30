@@ -1,9 +1,13 @@
   <?php
+  $hostname = 'ble5mmo2o5v9oouq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
+  $database = 'chth8w2wutkpb8si';
+  $username = 'qltk5ab1kuo6v5uo';
+  $password = 'ueajwkdwndfhkrxv';
   try {
-    $pdo = new PDO('mysql:host=localhost;dbname=dbkgb', 'root', '');
+    $pdo = new PDO("mysql:host=$hostname;dbname=$database", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    if ($pdo->exec('CREATE DATABASE IF NOT EXISTS dbkgb') !== false) {
-      $missionK = new PDO('mysql:host=localhost;dbname=dbkgb', 'root', '');
+    if ($pdo->exec('CREATE DATABASE IF NOT EXISTS chth8w2wutkpb8si') !== false) {
+      $missionK = new PDO("mysql:host=$hostname;dbname=$database", $username, $password);
       if ($missionK->exec('CREATE TABLE IF NOT EXISTS `missions` (
                 `id` int(12) NOT NULL AUTO_INCREMENT,
                 `title` varchar(255) NOT NULL,

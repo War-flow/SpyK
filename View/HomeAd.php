@@ -2,12 +2,12 @@
 
 session_start();
 
+require_once '../Log/Dsn.php';
 require_once 'Header/HeaderAd.html';
 require_once 'DataManager/MissionManager.php';
 
 
 if (isset($_SESSION['email'])) {
-$pdo = new PDO('mysql:host=localhost;dbname=dbkgb', 'root', '');
 $page = $_GET['page'] ?? 1 ;
 $manager = new MissionManager($pdo);
 
