@@ -1,12 +1,12 @@
   <?php
-  $hostname = 'ble5mmo2o5v9oouq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
-  $database = 'chth8w2wutkpb8si';
-  $username = 'qltk5ab1kuo6v5uo';
-  $password = 'ueajwkdwndfhkrxv';
+  $hostname = 'uyu7j8yohcwo35j3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
+  $database = 'mahjmmdwa6sj72o9';
+  $username = 'yy4kgsc6x14bh9ue';
+  $password = 'hgvlup9dnifdcj2j';
   try {
     $pdo = new PDO("mysql:host=$hostname;dbname=$database", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    if ($pdo->exec('CREATE DATABASE IF NOT EXISTS chth8w2wutkpb8si') !== false) {
+    if ($pdo->exec('CREATE DATABASE IF NOT EXISTS mahjmmdwa6sj72o9') !== false) {
       $missionK = new PDO("mysql:host=$hostname;dbname=$database", $username, $password);
       if ($missionK->exec('CREATE TABLE IF NOT EXISTS `missions` (
                 `id` int(12) NOT NULL AUTO_INCREMENT,
