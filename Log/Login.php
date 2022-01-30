@@ -39,7 +39,6 @@ if (isset($_SESSION['email'])) {
       </form>
     </div>
   </div>
-  <a href="../View/FormManager/FormAdmin.php">Inscription</a>
 <script src="../Bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 </html>
