@@ -8,7 +8,7 @@ require_once 'DataManager/MissionManager.php';
 if (isset($_SESSION['email'])) {
 
   header("Location:HomeAd.php");
-} else {
+} elseif (!isset($_SESSION['email'])) {
 
 
   $pdo = new PDO('mysql:host=localhost;dbname=dbkgb', 'root', '');
@@ -24,7 +24,7 @@ if (isset($_SESSION['email'])) {
     for ($i = 1; $i <= ceil($totalMission['totalMission'] / 2); $i++) {
       echo '<a href="?page=' . $i . '">' . $i . '</a> - ';
     }
-  }
+  } 
 } ?>
 
 <head>

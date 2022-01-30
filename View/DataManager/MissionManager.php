@@ -1,6 +1,6 @@
 <?php 
 
-require_once '../../Log/Dsn.php';
+$pdo = new PDO('mysql:host=localhost;dbname=dbkgb', 'root', '');
 
 if (isset($_POST['submit']))
 {

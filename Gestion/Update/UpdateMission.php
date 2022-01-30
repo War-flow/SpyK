@@ -73,28 +73,28 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                         <h1>Mise A jour Mission</h1>
                     </div>
                        <label for="title">Titre</label>
-                        <input type="text" name="title" class="text"   maxlength="255">
+                        <input type="text" name="title" class="text" maxlength="255">
 
                         <label for="description">Description</label>
-                        <textarea name="description" class="text"  maxlength="1000"></textarea>
+                        <textarea name="description" class="text" maxlength="1000"></textarea>
 
                         <label for="codename">Nom de code</label>
-                        <input type="text" name="codename" class="text"  maxlength="255">
+                        <input type="text" name="codename" class="text" maxlength="255">
 
                         <label for="country">Pays</label>
-                        <input type="text" name="country" class="text"  maxlength="25">
+                        <input type="text" name="country" class="text" maxlength="25">
 
                         <label for="agent"> Code Agents</label>
-                        <input type="number" name="agent" class="text"  maxlength="12" minlength="12">
+                        <input type="number" name="agent" class="text" maxlength="12" minlength="5">
 
                         <label for="targets">Cible</label>
-                        <input type="text" name="targets" class="text"  maxlength="255">
+                        <input type="text" name="targets" class="text" maxlength="255">
 
                         <label for="contacts">Contacts</label>
-                        <input type="text" name="contacts" class="text"  maxlength="255">
+                        <input type="text" name="contacts" class="text" maxlength="255">
 
                         <label for="type">Type</label>
-                        <input type="text" name="type" class="text"  maxlength="255">
+                        <input type="text" name="type" class="text" maxlength="255">
 
                         <label for="status">Status</label>
                         <select class="text" name="status">
@@ -105,7 +105,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                         </select><br>
 
                         <label for="hide">Code Planque</label>
-                        <input type="number" name="hide" class="text" maxlength="12" minlength="12">
+                        <input type="number" name="hide" class="text" maxlength="12" minlength="5">
 
                         <label for="startDate">Date de début</label>
                         <input type="date" name="startDate" class="text" >
