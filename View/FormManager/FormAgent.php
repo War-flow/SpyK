@@ -18,7 +18,7 @@
                         <h1>Création Agents</h1>
                     </div>
                     <label for="codeId">Code identification</label>
-                        <input type="text" name="codeId" class="text" required maxlength="12" minlength="5">
+                        <input type="number" name="codeId" class="text" required maxlength="12" minlength="5">
 
                        <label for="firstname">Prénom</label>
                         <input type="text" name="firstname" class="text" required maxlength="255" placeholder="Votre Prénom">
