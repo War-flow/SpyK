@@ -18,7 +18,7 @@
                         <h1>Création Agents</h1>
                     </div>
                     <label for="codeId">Code identification</label>
-                        <input type="number" name="codeId" class="text" required maxlength="12" minlength="12">
+                        <input type="text" name="codeId" class="text" required maxlength="12" minlength="5">
 
                        <label for="firstname">Prénom</label>
                         <input type="text" name="firstname" class="text" required maxlength="255" placeholder="Votre Prénom">
@@ -27,7 +27,7 @@
                         <input type="text" name="lastname" class="text" required maxlength="255" placeholder="Votre Nom">
 
                         <label for="birth">Date de naissance</label>
-                        <input type="date" name="birth" class="text" required>
+                        <input type="date" name="birth" class="text"  max="2000-01-01"  min="1965-01-01"required>
 
                         <label for="nation">Nationalité</label>
                         <input type="text" name="nation" class="text" required maxlength="25"  placeholder="Nationalité">

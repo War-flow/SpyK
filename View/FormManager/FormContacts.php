@@ -24,7 +24,7 @@
                         <input type="text" name="lastname" class="text" required maxlength="255" placeholder="Nom">
 
                         <label for="birth">Date de naissance</label>
-                        <input type="date" name="birth" class="text" required>
+                        <input type="date" name="birth" class="text" max="2000-01-01"  min="1965-01-01" required>
 
                         <label for="codename">Nom de Code</label>
                         <input type="text" name="codename" class="text" required maxlength="50"  placeholder="Nom de Code">

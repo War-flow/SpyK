@@ -18,7 +18,7 @@ $statement = $pdo->prepare('SELECT COUNT(*) AS totalMission FROM missions');
 if ($statement->execute()) {
     $totalMission = $statement->fetch(PDO::FETCH_ASSOC);
     for ($i = 1; $i <= ceil($totalMission['totalMission'] / 3); $i++) {
-        echo '<a href="?page=' . $i . '">' . $i . '</a> - ';
+        echo '<a class="btn btn-primary" role="button" href="?page=' . $i . '">' . $i . '</a> - ';
     }
 }
 

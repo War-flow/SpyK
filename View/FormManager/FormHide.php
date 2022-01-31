@@ -18,7 +18,7 @@
                         <h1>Création Planque</h1>
                     </div>
                     <label for="code">Code Planque</label>
-                        <input type="number" name="code" class="text" required maxlength="12" minlength="12">
+                        <input type="number" name="code" class="text" required maxlength="12" minlength="2">
 
                         <label for="address">Adresse</label>
                         <input type="text" name="address" class="text" required maxlength="300" placeholder="Adresse">
