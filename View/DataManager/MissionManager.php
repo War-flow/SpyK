@@ -5,7 +5,7 @@ $database = 'mahjmmdwa6sj72o9';
 $username = 'yy4kgsc6x14bh9ue';
 $password = 'a72u1xtlwrjxp3aw';
 
-new PDO("mysql:host=$hostname;dbname=$database", $username, $password);
+$pdo = new PDO("mysql:host=$hostname;dbname=$database", $username, $password);
 
 if (isset($_POST['submit']))
 {

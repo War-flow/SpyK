@@ -21,7 +21,7 @@
                         <input type="number" name="code" class="text" required maxlength="12" minlength="2">
 
                         <label for="address">Adresse</label>
-                        <input type="text" name="address" class="text" required maxlength="300" placeholder="Adresse">
+                        <input type="text" name="address" class="text" required maxlength="350" placeholder="Adresse">
 
                         <label for="country">Pays</label>
                         <input type="text" name="country" class="text" required maxlength="25">

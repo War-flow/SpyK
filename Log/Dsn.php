@@ -9,27 +9,21 @@
     if ($pdo->exec('CREATE DATABASE IF NOT EXISTS mahjmmdwa6sj72o9') !== false) {
       $missionK = new PDO("mysql:host=$hostname;dbname=$database", $username, $password);
       if ($missionK->exec('CREATE TABLE IF NOT EXISTS `missions` (
-                `id` int(12) NOT NULL AUTO_INCREMENT,
-                `title` varchar(255) NOT NULL,
-                `description` text NOT NULL,
-                `codename` varchar(255) NOT NULL,
-                `country` varchar(255) NOT NULL,
-                `agent` int(12) NOT NULL,
-                `targets` varchar(255) NOT NULL,
-                `contacts` varchar(255) NOT NULL,
-                `type` varchar(255) NOT NULL,
-                `status` varchar(255) NOT NULL,
-                `hide` varchar(255) NOT NULL,
-                `startDate` date NOT NULL,
-                `endDate` date NOT NULL,
-                PRIMARY KEY (`id`),
-                UNIQUE KEY `codename` (`codename`,`targets`),
-                KEY `agent` (`agent`),
-                KEY `target` (`targets`),
-                KEY `contact` (`contacts`),
-                KEY `countryM` (`country`),
-                KEY `hide` (`hide`),
-                KEY `type` (`type`))') !== false) {
+        `id` int(12) NOT NULL AUTO_INCREMENT,
+        `title` varchar(255) NOT NULL,
+        `description` text NOT NULL,
+        `codename` varchar(255) NOT NULL,
+        `country` varchar(255) NOT NULL,
+        `agent` varchar(120) NOT NULL,
+        `targets` varchar(255) NOT NULL,
+        `contacts` varchar(255) NOT NULL,
+        `type` varchar(255) NOT NULL,
+        `status` varchar(255) NOT NULL,
+        `hide` varchar(255) DEFAULT "Pas de planque",
+        `startDate` date NOT NULL,
+        `endDate` date NOT NULL,
+        PRIMARY KEY (`id`)
+      )') !== false) {
 
         if ($missionK->exec('CREATE TABLE IF NOT EXISTS `agents` (
           `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -73,15 +67,12 @@
                 UNIQUE KEY `codeName` (`codeName`))') !== false) {
 
                 if ($missionK->exec('CREATE TABLE IF NOT EXISTS `hide` (
-                    `id` int(11) NOT NULL AUTO_INCREMENT,
-                    `code` int(12) NOT NULL,
-                    `address` varchar(350) NOT NULL,
-                    `country` varchar(255) NOT NULL,
-                    `type` varchar(255) NOT NULL,
-                    PRIMARY KEY (`id`),
-                    UNIQUE KEY `code` (`code`),
-                    UNIQUE KEY `code_2` (`code`,`address`),
-                    KEY `country` (`country`))') !== false) {
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `code` int(12) NOT NULL,
+                  `address` varchar(350) NOT NULL,
+                  `country` varchar(255) NOT NULL,
+                  `type` varchar(255) NOT NULL,
+                  PRIMARY KEY (`id`))') !== false) {
                   echo '';
                 } else {
                   echo 'Impossible de créer la table Planque<br>';

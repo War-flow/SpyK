@@ -30,7 +30,7 @@
                         <input type="text" name="country" class="text" required maxlength="25">
 
                         <label for="agent"> Code Agents</label>
-                        <input type="number" name="agent" class="text" required maxlength="12" minlength="12">
+                        <input type="text" name="agent" class="text" required maxlength="50" minlength="5">
 
                         <label for="targets">Cible</label>
                         <input type="text" name="targets" class="text" required maxlength="255">
